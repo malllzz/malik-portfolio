@@ -1,11 +1,12 @@
+import React, { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Projects from './components/Projects';
-import Experience from './components/Experience';
-import About from './components/About';
-import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import ThemeToggle from './components/ThemeToggle';
+const Projects = lazy(() => import('./components/Projects'));
+const Experience = lazy(() => import('./components/Experience'));
+const About = lazy(() => import('./components/About'));
+const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
   return (
@@ -13,13 +14,18 @@ function App() {
       <Navbar />
 
       <main>
-      <Hero />
-      <Projects />
-      <Experience />
-      <About />
+        <Hero />
+        <Suspense fallback={<div className="text-center py-20">Loading...</div>}>
+          <Projects />
+          <Experience />
+          <About />
+        </Suspense>
       </main>
 
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
+
       <ThemeToggle />
       <ScrollToTop />
     </div>

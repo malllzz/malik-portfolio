@@ -9,14 +9,15 @@ const About = () => {
       spread: 70,
       origin: { y: 0.6 },
       colors: ['#6366F1', '#FFD700', '#ffffff'],
+      zIndex: 9999,
       disableForReducedMotion: true
     });
   };
 
   const riseUp = {
     hidden: { opacity: 0, y: 50 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.6, ease: "easeOut" }
     }
@@ -25,12 +26,12 @@ const About = () => {
   return (
     <section id="about" className="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
       <div className="container mx-auto px-6 max-w-5xl">
-        
+
         {/* Header */}
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{once: true}}
+          viewport={{ once: true }}
           variants={riseUp}
           className="text-center mb-16"
         >
@@ -41,7 +42,7 @@ const About = () => {
         </motion.div>
 
         {/* Main Content */}
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -52,9 +53,9 @@ const About = () => {
           <div className="w-full md:w-1/3 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 group rotate-3 hover:rotate-0 transition-all duration-500">
               <div className="absolute inset-0 translate-x-4 translate-y-4 bg-[#6366F1] rounded-3xl"></div>
-              <img 
-                src="/images/profile-picture.jpg" 
-                alt="Malik Aziz Ramadhan" 
+              <img
+                src="/images/profile-picture.webp"
+                alt="Malik Aziz Ramadhan"
                 className="relative w-full h-full object-cover rounded-3xl shadow-xl bg-gray-100 dark:bg-gray-800"
               />
             </div>
@@ -62,19 +63,19 @@ const About = () => {
 
           <div className="w-full md:w-2/3 text-gray-600 dark:text-gray-300 leading-relaxed text-lg space-y-6 transition-colors">
             <p>
-              I am a dedicated <strong className="text-gray-900 dark:text-white">Junior Web Developer</strong> focused on delivering functional and responsive web solutions. 
-              With a hands-on approach to <strong className="text-gray-900 dark:text-white">HTML, CSS, JavaScript, and React</strong>, I utilize these tools to transform concepts into working applications. 
+              I am a dedicated <strong className="text-gray-900 dark:text-white">Junior Web Developer</strong> focused on delivering functional and responsive web solutions.
+              With a hands-on approach to <strong className="text-gray-900 dark:text-white">HTML, CSS, JavaScript, and React</strong>, I utilize these tools to transform concepts into working applications.
               My priority is writing clean code that meets project requirements effectively.
             </p>
             <p>
-              Beyond technical implementation, I bring a strong understanding of System Flow and Logic. 
-              I believe that a great developer understands the "Why" behind the code. 
+              Beyond technical implementation, I bring a strong understanding of System Flow and Logic.
+              I believe that a great developer understands the "Why" behind the code.
               Combined with my interest in <strong className="text-gray-900 dark:text-white">UI/UX Design</strong>, I aim to build digital products that are not only robust in logic but also intuitive for the user.
             </p>
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -87,18 +88,18 @@ const About = () => {
               Code to Learn
             </span>
           </h3>
-          
+
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg transition-colors">
-            I am deeply passionate about this field because of the endless opportunities it offers. 
-            From mastering fundamental theories to building practical applications, I believe that by 
-            continuously learning and adapting, I can tackle any challenge. I also love sharing knowledge 
+            I am deeply passionate about this field because of the endless opportunities it offers.
+            From mastering fundamental theories to building practical applications, I believe that by
+            continuously learning and adapting, I can tackle any challenge. I also love sharing knowledge
             and collaborating with others so we can grow together in this dynamic industry.
           </p>
         </motion.div>
 
         {/* Contact */}
-        <motion.div 
-          id="contact" 
+        <motion.div
+          id="contact"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -111,14 +112,34 @@ const About = () => {
           <p className="text-gray-500 dark:text-gray-400 text-lg mb-8 transition-colors">
             Open for new projects and collaborations.
           </p>
-          
-          <a 
+
+          <motion.a
             href="mailto:malikazizrmdhn@gmail.com"
-            onMouseEnter={handleHover}
-            className="inline-block bg-[#6366F1] text-white font-bold px-10 py-4 rounded-xl shadow-lg hover:bg-blue-700 hover:scale-105 transition-all duration-300"
+            onHoverStart={handleHover}
+
+            animate={{
+              rotate: [0, -3, 3, -3, 3, 0],
+              scale: [1, 1.02, 1, 1.02, 1]
+            }}
+
+            transition={{
+              duration: 0.5,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatDelay: 2
+            }}
+
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "#1D4ED8",
+              rotate: 0
+            }}
+            whileTap={{ scale: 0.95 }}
+
+            className="inline-block bg-[#6366F1] text-white font-bold px-10 py-4 rounded-xl shadow-lg cursor-pointer"
           >
             Let's Collab!!
-          </a>
+          </motion.a>
         </motion.div>
 
       </div>
