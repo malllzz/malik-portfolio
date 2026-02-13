@@ -37,7 +37,7 @@ const About = () => {
         >
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors">About</h2>
           <p className="text-gray-600 dark:text-gray-400 text-lg transition-colors">
-            Get to know the developer behind the code — my story, values, and expertise.
+            Get to know the engineer behind the quality — my story, values, and expertise.
           </p>
         </motion.div>
 
@@ -63,14 +63,14 @@ const About = () => {
 
           <div className="w-full md:w-2/3 text-gray-600 dark:text-gray-300 leading-relaxed text-lg space-y-6 transition-colors">
             <p>
-              I am a dedicated <strong className="text-gray-900 dark:text-white">Junior Web Developer</strong> focused on delivering functional and responsive web solutions.
-              With a hands-on approach to <strong className="text-gray-900 dark:text-white">HTML, CSS, JavaScript, and React</strong>, I utilize these tools to transform concepts into working applications.
-              My priority is writing clean code that meets project requirements effectively.
+              I am an aspiring <strong className="text-gray-900 dark:text-white">Quality Assurance Engineer</strong> with a solid foundation in Web Development.
+              My background in <strong className="text-gray-900 dark:text-white">HTML, CSS, JavaScript, and React</strong> gives me a unique advantage: I don't just find bugs, I understand <em>why</em> they happen.
+              This technical insight allows me to conduct deeper analysis (White Box Testing) and write more effective automation scripts.
             </p>
             <p>
-              Beyond technical implementation, I bring a strong understanding of System Flow and Logic.
-              I believe that a great developer understands the "Why" behind the code.
-              Combined with my interest in <strong className="text-gray-900 dark:text-white">UI/UX Design</strong>, I aim to build digital products that are not only robust in logic but also intuitive for the user.
+              Beyond finding defects, I focus on the <strong className="text-gray-900 dark:text-white">System Flow and User Experience</strong>.
+              I believe that a great QA Engineer acts as the bridge between code and user satisfaction.
+              Combined with my knowledge of <strong className="text-gray-900 dark:text-white">UI/UX Design</strong>, I strive to ensure that software is not only bug-free but also intuitive and reliable for the end user.
             </p>
           </div>
         </motion.div>
@@ -83,17 +83,16 @@ const About = () => {
           className="mb-16"
         >
           <h3 className="text-3xl md:text-4xl font-bold mb-6 flex flex-wrap items-center gap-3 transition-colors">
-            <span className="text-[#6366F1]">Learn to Code,</span>
+            <span className="text-[#6366F1]">Code with Passion,</span>
             <span className="bg-[#6366F1] text-white px-4 py-1 rounded-lg shadow-md transform -rotate-1 inline-block">
-              Code to Learn
+              Test with Precision
             </span>
           </h3>
 
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg transition-colors">
-            I am deeply passionate about this field because of the endless opportunities it offers.
-            From mastering fundamental theories to building practical applications, I believe that by
-            continuously learning and adapting, I can tackle any challenge. I also love sharing knowledge
-            and collaborating with others so we can grow together in this dynamic industry.
+            I am deeply passionate about ensuring software reliability because I believe quality is the core of user trust.
+            From manually testing edge cases to building automated test suites with <strong>Selenium & Katalon</strong>, I enjoy the challenge of making software unbreakable.
+            I love collaborating with developers to create a culture of quality in every project.
           </p>
         </motion.div>
 
@@ -107,10 +106,10 @@ const About = () => {
           className="text-center py-16 mt-10"
         >
           <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-4 transition-colors">
-            Let’s create something amazing together.
+            Let’s ensure quality together.
           </h2>
           <p className="text-gray-500 dark:text-gray-400 text-lg mb-8 transition-colors">
-            Open for new projects and collaborations.
+            Open for QA roles, testing projects, and collaborations.
           </p>
 
           <motion.a
